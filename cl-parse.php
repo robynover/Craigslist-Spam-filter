@@ -9,7 +9,7 @@
  * Craigslist URL:
  * Replace the URL inside the quotes with the URL to the RSS feed for your search
 */
-$craigslist_url = 'http://newyork.craigslist.org/search/roo?query=-furnished&addTwo=purrr&minAsk=500&maxAsk=1000&srchType=A&format=rss';
+$craigslist_url = 'http://newyork.craigslist.org/search/roo?&addTwo=purrr&minAsk=500&maxAsk=1000&srchType=A&format=rss';
 
 /*
 	Use these variables to control how much all-caps shouting is too much:
@@ -39,8 +39,8 @@ foreach ($cl->item as $item){
 }
 
 function percentUpper($string) {
-	$total_chars = strlen($string); //24
-    $upper_chars= preg_match_all('/[A-Z]/', $string,$m); //6
+	$total_chars = strlen($string); 
+    $upper_chars= preg_match_all('/[A-Z]/', $string,$m); 
 	$percent = ($upper_chars/$total_chars) * 100;
 	return $percent;	
 }
