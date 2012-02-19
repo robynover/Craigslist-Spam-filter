@@ -24,7 +24,7 @@ window.addEventListener("load", function(e) {
 				if (percent_caps > 25){
 					//remove this listing
 					p = links[i].parentNode;
-					//p.parentNode.removeChild(p);
+					p.parentNode.removeChild(p);
 					//console.log (title + ' : removed');
 					count++;
 				}
