@@ -21,16 +21,18 @@ window.addEventListener("load", function(e) {
 			if (caps){	
 				num_caps = caps.length;
 				percent_caps = num_caps/total_chars * 100;
-				if (percent_caps > 25){
+				if (percent_caps > 20){
 					//remove this listing
 					p = links[i].parentNode;
-					p.parentNode.removeChild(p);
-					//console.log (title + ' : removed');
+					//p.style.backgroundColor = '#333333';
+					p.style.display = 'none';
+					//p.parentNode.removeChild(p);
+					//console.log (title + ' : removed. Parent: '+parent);
 					count++;
 				}
 			}	
 		}
 		
 	}
-	//console.log(count+' spammy posts zapped!');
+	console.log(count+' spammy posts zapped!');
 }, false);
